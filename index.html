@@ -30,9 +30,16 @@
                     }else {
                         rate = 1;
                     }
+                    
                     const interest = (entry.principal * rate * entry.time)/100;
-                    console.log(interest);
-                    //return interest;
+                    interestData.push({
+                        "principal": entry.principal,
+                        "rate": rate,
+                        "time": entry.time,
+                        "interest": interest
+                    });
+                    console.log(interestData);
+                    return interest;
                 })
 
             }
